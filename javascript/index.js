@@ -8,7 +8,7 @@ const getProduct = async function () {
       let data = await response.json();
       console.log(data)
 
-      // Fonction pour modifier le DOM //
+      // Fonction pour modifier le DOM 
       function templateItems(data) {
 
 
@@ -75,7 +75,7 @@ const getProduct = async function () {
 
 
       }
-      ///////// BOUCLE AFIN DE RECUPERER CHAQUE PRODUIT DE L'API ///////   
+      // BOUCLE AFIN DE RECUPERER CHAQUE PRODUIT DE L'API 
       for (let i = 0; i < data.length; i++) {
         templateItems(data[i]);
       }

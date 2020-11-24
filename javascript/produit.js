@@ -1,11 +1,11 @@
-////// RECUPERATION DE L'ID DU PRODUIT ////////
+// RECUPERATION DE L'ID DU PRODUIT 
 const queryString = window.location.search;
 const cameraId = new URLSearchParams(queryString).get('id');
 console.log(cameraId);
 const api = "http://localhost:3000/api/cameras/" + cameraId;
 
 
-///// REQUETE API VIA FETCH ////////
+// REQUETE API VIA FETCH 
 const getProduct = async function () {
   try {
     let response = await fetch(api);
@@ -14,7 +14,7 @@ const getProduct = async function () {
       console.log(data)
 
 
-      ////// FONCTION MODIFICATION DOM ///////
+      // FONCTION MODIFICATION DOM 
       function templateItems() {
 
 
@@ -105,7 +105,7 @@ const getProduct = async function () {
 
         // fonction Ajout au panier avec gestion de la quantité 
 
-        /////// FONCTION AJOUT DANS LE PANIER //////
+        // FONCTION AJOUT DANS LE PANIER 
         function addToCart(data) {
           let cartProducts = []
           let saveToCartProduct = {
@@ -136,7 +136,7 @@ const getProduct = async function () {
           checkCart()
         }
 
-        /////// FONCTION DU CONTROLE DE PANIER (possibilité afficher quantité total dans panier) //////////
+        // FONCTION DU CONTROLE DE PANIER (possibilité afficher quantité total dans panier) 
         function checkCart() {
           let nb = 0;
 

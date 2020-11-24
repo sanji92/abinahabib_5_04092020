@@ -32,7 +32,7 @@ function articlesPanier() {
         products: []
     }
 
-    ///// AFFICHE CHARQUE PRODUIT AJOUTE DANS LOCALSTORAGE DANS LE RECAPITULATIF PANIER
+    // AFFICHE LES PRODUIT AJOUTE DANS LOCALSTORAGE DANS LE RECAPITULATIF PANIER
 
     products = JSON.parse(localStorage.getItem(('cartProducts')))
     products.forEach((product, index) => {
@@ -92,7 +92,7 @@ function articlesPanier() {
     const emailId = document.getElementById('email')
     const btnCommande = document.getElementById('confirmercommande')
 
-    //////// FONCTION DE VERIFICATION CHAMPS FORMULAIRE ///////////
+    // FONCTION DE VERIFICATION CHAMPS FORMULAIRE //
     const validationForm = () => {
 
         const isNotEmpty = value => value !== "" ? true : false;
@@ -163,7 +163,7 @@ function articlesPanier() {
     console.log(JSON.stringify(cartInformation))
 
 
-    /////// FONCTION REQUETE POST FETCH ///////
+    // FONCTION REQUETE POST FETCH 
     const postData = async (method, url, dataElt) => {
         const response = await fetch(url, {
             headers: {
@@ -175,7 +175,7 @@ function articlesPanier() {
         return await response.json();
     }
 
-    ////// ECOUTEUR EVENEMENT BOUTON ENVOI DE CARTINFORMATION DANS API ////// 
+    // ECOUTEUR EVENEMENT BOUTON ENVOI DE CARTINFORMATION DANS API 
     btnCommande.addEventListener('click', async function (e) {
         e.preventDefault()
         if (validationForm()) {
